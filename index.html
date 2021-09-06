@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en,ua">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV (lab1)</title>
+
+    <style type="text/css">
+        .tab { margin: 20px; }
+        .tableft { margin-left: 40px; }
+    </style>
 </head>
 <body style="background-image: url(images/background.jpg)"> 
-  <img src="me.JPG", alt="Profile picture"></a>
+<br><br><br><br><br>
+<table width = "800px"   align = "center" border = "2" bordercolor = "Blue" 
+bgcolor = "LightBlue" cellpadding ="0" cellspacing="0"  
+style=" box-shadow: 0 0 5px 2px rgb(0, 126, 243)" />
+<tr><td align="center" bgcolor = "LightBlue">
+<img src="images/me.JPG", alt="Profile picture", width="240", height="320",
+ align = "left", class="tab">
+ <br>
+ <h2 align = "left", class="tab">Menu</h2>
+ <ul align = "left", class="tab">
+    <li>MenuItem1</li>
+    <li>MenuItem2</li>
+    <li>MenuItem3</li>               
+</ul>
 <h2>Volodymyr Larionov</h2>
-<br>
 <h2>My education</h2>
 <table>
   <tr>
@@ -27,6 +44,27 @@
     <td>2017</td>
     <td>2020</td>
   </tr>
+</table>
+<br>
+<h2 style="text-align:left;", class="tableft">My skills</h2>
+    <ul style="text-align:left;", class="tab">        
+        <li><a href="frontend.html">Frontend developer 1 year</a></li>
+        <li><a href="backend.html">Backend developer 2 years</a></li>
+    </ul>
+
+    <h2 style="text-align:left;", class="tableft">Contact</h2>
+
+    <form action="" style="text-align:left;", class="tableft">
+        <label for="">Name</label> 
+        <input type="text" placeholder="Enter name"> <br>
+        <label for="">Email</label> 
+        <input type="email" placeholder="Enter email"> <br>
+        <label for="">Message</label> <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea> <br>
+        <input type="submit">
+    </form>
+
+    <footer style="text-align:left;", class="tab">&copy; Larionov Volodymyr, 2021</footer>
 </table>
 </body>
 </html>
