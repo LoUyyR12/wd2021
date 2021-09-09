@@ -17,18 +17,35 @@
 bgcolor = "LightBlue" cellpadding ="0" cellspacing="0"  
 style=" box-shadow: 0 0 5px 2px rgb(0, 126, 243)" />
 <tr><td align="center" bgcolor = "LightBlue">
-<img src="images/me.JPG", alt="Profile picture", width="240", height="320",
- align = "left", class="tab">
+  <div class="foto">
+    <img src="images/me.JPG", alt="Profile picture", width="240", height="320",
+align = "left", class="tab">
+  </div>
  <br>
- <h2 align = "left", class="tab">Menu</h2>
- <ul align = "left", class="tab">
-    <li>MenuItem1</li>
-    <li>MenuItem2</li>
-    <li>MenuItem3</li>               
-</ul>
-<h2>Volodymyr Larionov</h2>
-<h2>My education</h2>
-<table>
+ 
+<section class="hero">
+  <div class="container">
+    <div class="about-me">
+      <h2>Volodymyr Larionov</h2>
+    </div>
+    
+  </div>
+</section>
+<nav>
+  <div class="container" align = "left">
+      <ul>
+          <li> <a href="#edu">Education</a></li>
+          <li> <a href="#skl">Skills</a></li>
+          <li> <a href="#projects"> Projects</a></li>
+          <li> <a href="#cont">Contact</a></li>
+
+      </ul>
+  </div>
+</nav>
+<section id="edu" class="education">
+  <div class="container">
+    <h2>My education</h2>
+  <table>
   <tr>
     <th>School name</th>
     <th>Year of admission</th>
@@ -44,14 +61,35 @@ style=" box-shadow: 0 0 5px 2px rgb(0, 126, 243)" />
     <td>2017</td>
     <td>2020</td>
   </tr>
-</table>
-<br>
+  </table>
+  </div>
+</section>
+<br><br><br><br>
+<section id="skl" class="skills">
+  <div class="container">
 <h2 style="text-align:left;", class="tableft">My skills</h2>
     <ul style="text-align:left;", class="tab">        
-        <li><a href="frontend.html">Frontend developer 1 year</a></li>
-        <li><a href="backend.html">Backend developer 2 years</a></li>
+        <li><p>Game developer (<a href="https://unity.com", target=”_blank”>Unity</a>) for 4 month</p></li>
+        <li><p>Tournaments and events organisation (<a href="https://Discord.com", target=”_blank”>Discord</a>) for 2 years</p></li>
+        <li><p> Worked in support for 2 <a href="https://Discord.com", target=”_blank”>discord</a> bots for 2.5 years</p></li>
+        <li><p> Small <a href="https://Discord.com", target=”_blank”>discord</a> community server (600 users) administrator for 3 years</p></li>
+        <li><p> html basics for 6 month (see <a href="#projects"> my projects</a>)</p></li>
     </ul>
-
+  </div>
+</section>
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 style="text-align:left;", class="tableft">My projects</h2>
+    <ul style="text-align:left;", class="tab">
+      <li><a href="https://github.com/LoUyyR12/Parks-of-the-world", target=”_blank”>"Parks of the world" site for olympiad, created 5 years ago</a></li>
+      <li><a href="https://github.com/LoUyyR12/Askania-Nova", target=”_blank”>"Askania-Nova" site for olympiad, created 6 years ago</a></li>
+      <li><a href="https://sharemygame.com/@LoUyyR/crystall-caves-of-artoan", target=”_blank”>Crystall caves of Artoan (Unity)</a></li>
+      <li>Argon (Unity, in development)</li>
+    </ul>
+  </div>
+</section>
+<section id="cont" class="contact">
+  <div class="container">
     <h2 style="text-align:left;", class="tableft">Contact</h2>
 
     <form action="" style="text-align:left;", class="tableft">
@@ -60,11 +98,19 @@ style=" box-shadow: 0 0 5px 2px rgb(0, 126, 243)" />
         <label for="">Email</label> 
         <input type="email" placeholder="Enter email"> <br>
         <label for="">Message</label> <br>
-        <textarea name="" id="" cols="30" rows="10"></textarea> <br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Additional info here"></textarea> <br>
         <input type="submit">
     </form>
+  </div>
+</section>
 
-    <footer style="text-align:left;", class="tab">&copy; Larionov Volodymyr, 2021</footer>
+<footer>
+  <div class="container">
+      <div class="copyright">
+          <p>&copy; Larionov Volodymyr, 2021</p>
+      </div>
+  </div>
+</footer>
 </table>
 <br><br><br><br><br>
 </body>
