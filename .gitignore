@@ -1,1 +1,8 @@
 node_modules
+.cache
+.vscode
+dist
+docs
+src
+package.json
+package-lock.json
