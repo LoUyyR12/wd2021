@@ -26,15 +26,20 @@ section {
 }
 
 .buttons-container {
-  margin: 7%;
+  margin-top: 80px;
 }
 
 .buttons-container p {
   text-decoration: underline;
   -webkit-text-decoration-color: #84a5e6;
           text-decoration-color: #84a5e6;
-  font-size: 1rem;
+  font-size: 4rem;
   color: #84a5e6;
+}
+
+.button {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 nav {
