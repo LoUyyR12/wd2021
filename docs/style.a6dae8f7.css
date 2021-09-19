@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #ecd0ac;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: clamp(550px, 100vh, 1000px);
+}
+
+.hero {
+  background-image: url("/header_background.ee3c2785.jpg");
+  background-color: #ecd0ac;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.buttons-container {
+  margin: 7%;
+}
+.buttons-container p {
+  text-decoration: underline;
+  text-decoration-color: #84a5e6;
+  font-size: 1rem;
+  color: #84a5e6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 2rem;
+}
+nav .logo {
+  letter-spacing: 0.25rem;
+  line-height: 1.3;
+}
+nav .logo::first-letter {
+  background-color: #a66f26;
+  padding: 0 1px 0 5px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+}
+nav li {
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+}
+nav li:last-child {
+  padding-right: 0;
+}
+nav a {
+  text-decoration: none;
+}
+
+.filler {
+  background-color: #9aa5db;
+  height: 3vh;
+}
+
+.about {
+  background-image: url("/middle_background.5a030da7.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0rem;
+  color: #f1de84;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1rem;
+}
+.about .middle-text {
+  color: #f1de84;
+  padding-left: 2rem;
+  align-self: flex-end;
+  text-shadow: 1px 1px 2px #150e05;
+}
+.about .middle-text h2 {
+  margin-top: 4rem;
+  color: #f1de84;
+}
+.about .middle-text h3 {
+  margin: 2rem;
+  color: #f1de84;
+}
+.about .middle-text h1 {
+  font-size: 2rem;
+  color: #f1de84;
+}
+.about .middle-text h4 {
+  font-size: 2rem;
+  color: #f1de84;
+}
+.about .middle-text p {
+  font-size: 2rem;
+  color: #f1de84;
+}
+
+.person {
+  display: flex;
+  height: 70vh;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding-top: clamp(6rem, 20vh, 7rem);
+}
+.person img {
+  display: block;
+  width: clamp(150px, 15vw, 250px);
+  border: 2px solid #d9a259;
+  align-self: flex-start;
+}
+.person .text-info {
+  margin: 5vh;
+  padding-left: 2rem;
+  align-self: flex-end;
+  text-shadow: 1px 1px 2px #150e05;
+}
+.person .text-info h2 {
+  margin-top: 2rem;
+  mix-blend-mode: hard-light;
+}
+.person .text-info h3 {
+  margin: 2rem;
+  mix-blend-mode: hard-light;
+}
+.person .text-info h1 {
+  mix-blend-mode: hard-light;
+  font-size: 2rem;
+}
+
+.work {
+  text-align: center;
+  background-color: #ecd0ac;
+  padding-top: 3rem;
+}
+.work h2,
+.work h4,
+.work h5,
+.work p {
+  color: #533713;
+}
+.work .card-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.work .card-container .card {
+  background-color: #faf3ea;
+  margin: 1rem;
+  width: 100vw;
+  height: 40vh;
+  box-shadow: 1px 1px 5px #533713;
+  position: relative;
+}
+.work .card-container img {
+  display: block;
+  box-shadow: 1px 1px 5px #533713;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #faf3ea;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work .card-container h4 {
+  margin-top: 56px;
+}
+.work .card-container h5 {
+  font-style: italic;
+  margin: 0.25rem;
+}
+.work .card-container p {
+  font-size: 0.75rem;
+}
+@media only screen and (max-width: 768px) {
+  .work .work {
+    height: auto;
+  }
+  .work .card-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .work .card-container .card {
+    width: 50vw;
+    height: auto;
+    margin: 3rem 0;
+  }
+}
+.work .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.work .indicators .line {
+  margin: 3px;
+  width: 25px;
+  height: 6px;
+  background-color: #150e05;
+  box-shadow: 1px 1px 5px #533713;
+}
+.work .indicators .active {
+  background-color: #d9a259;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    height: auto;
+  }
+  section .person {
+    flex-direction: column;
+    padding-top: 0;
+    height: auto;
+    padding-bottom: 1rem;
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */

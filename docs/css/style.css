@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #dfbcb9;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: clamp(550px, 100vh, 1000px);
+}
+
+.hero {
+  background-image: url("../img/Sky.jpg");
+  background-color: #dfbcb9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 2rem;
+}
+nav .logo {
+  letter-spacing: 0.25rem;
+  line-height: 1.3;
+}
+nav .logo::first-letter {
+  background-color: #8d463f;
+  padding: 0 1px 0 5px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+}
+nav li {
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+}
+nav li:last-child {
+  padding-right: 0;
+}
+nav a {
+  text-decoration: none;
+}
+
+.person {
+  display: flex;
+  height: 60vh;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding-top: clamp(6rem, 20vh, 7rem);
+}
+.person img {
+  display: block;
+  width: clamp(300px, 35vw, 500px);
+  border: 2px solid #c07972;
+  align-self: flex-start;
+}
+.person .text-info {
+  padding-left: 2rem;
+  align-self: flex-end;
+  text-shadow: 1px 1px 2px #120908;
+}
+.person .text-info h2 {
+  margin-top: 2rem;
+  mix-blend-mode: hard-light;
+}
+.person .text-info h3 {
+  margin: 2rem;
+  mix-blend-mode: hard-light;
+}
+.person .text-info h1 {
+  mix-blend-mode: hard-light;
+  font-size: 2rem;
+}
+
+.work {
+  text-align: center;
+  background-color: #dfbcb9;
+  padding-top: 3rem;
+}
+.work h2,
+.work h4,
+.work h5,
+.work p {
+  color: #462320;
+}
+.work .card-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.work .card-container .card {
+  background-color: #f6ebea;
+  margin: 1rem;
+  width: 100vw;
+  height: 40vh;
+  box-shadow: 1px 1px 5px #462320;
+  position: relative;
+}
+.work .card-container img {
+  display: block;
+  box-shadow: 1px 1px 5px #462320;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #f6ebea;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work .card-container h4 {
+  margin-top: 56px;
+}
+.work .card-container h5 {
+  font-style: italic;
+  margin: 0.25rem;
+}
+.work .card-container p {
+  font-size: 0.75rem;
+}
+@media only screen and (max-width: 768px) {
+  .work .work {
+    height: auto;
+  }
+  .work .card-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .work .card-container .card {
+    width: 50vw;
+    height: auto;
+    margin: 3rem 0;
+  }
+}
+.work .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.work .indicators .line {
+  margin: 3px;
+  width: 25px;
+  height: 6px;
+  background-color: #120908;
+  box-shadow: 1px 1px 5px #462320;
+}
+.work .indicators .active {
+  background-color: #c07972;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    height: auto;
+  }
+  section .person {
+    flex-direction: column;
+    padding-top: 0;
+    height: auto;
+    padding-bottom: 1rem;
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
