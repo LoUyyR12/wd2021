@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 @font-face {
     font-family: "Booter - Zero Zero";
@@ -8,11 +9,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Bubblegum Sans', cursive;
+    src: url("Fonts/Bubblegum Sans.woff") format("woff");
+    font-weight: normal;
+  }
 
-* {
+body {
     box-sizing: border-box;
     font-family: Raleway;
     color: #777;
+}
+
+h2{
+    color: #4ccc5d;
 }
 
 html, body {
@@ -22,6 +32,7 @@ html, body {
 }
 
 .nav ul {
+    font-family: "Bubblegum Sans";
     margin: 0;
 }
 
@@ -37,6 +48,7 @@ html, body {
 }
 
 .main-nav {
+    font-family: "Bubblegum Sans";
     text-align: center;
     font-size: 1.1em;
     font-weight: lighter;
@@ -44,8 +56,13 @@ html, body {
 }
 
 .main-nav li {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "Bubblegum Sans";
+    color: #777;
     padding: 0 5%;
-}
+    font-size: 1.5em;
+  }
 
 .nav a:hover {
     background-color: rgba(255, 255, 255, .3)
@@ -82,7 +99,6 @@ html, body {
     padding: 0 1.5em;
 }
 .section-header {
-    font-family: "Metal Mania";
     font-weight: normal;
     color: #333;
     text-align: center;
