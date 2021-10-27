@@ -5,8 +5,10 @@
   "main": "store.js",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^16.11.1",
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "tslib": "^2.3.1"
   },
   "scripts": {
     "dev": "parcel index.html",

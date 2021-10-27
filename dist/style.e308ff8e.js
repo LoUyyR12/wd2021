@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./Fonts\\Booter - Zero Zero.woff":[["Booter - Zero Zero.099f916c.woff","Fonts/Booter - Zero Zero.woff"],"Fonts/Booter - Zero Zero.woff"],"./Fonts\\Booter - Zero Zero.woff2":[["Booter - Zero Zero.2cacc3b3.woff2","Fonts/Booter - Zero Zero.woff2"],"Fonts/Booter - Zero Zero.woff2"],"./Images\\Header Background.jpg":[["Header Background.c6c61d89.jpg","Images/Header Background.jpg"],"Images/Header Background.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./Fonts\\Booter - Zero Zero.woff":[["Booter - Zero Zero.099f916c.woff","Fonts/Booter - Zero Zero.woff"],"Fonts/Booter - Zero Zero.woff"],"./Fonts\\Booter - Zero Zero.woff2":[["Booter - Zero Zero.2cacc3b3.woff2","Fonts/Booter - Zero Zero.woff2"],"Fonts/Booter - Zero Zero.woff2"],"./Fonts\\Bubblegum Sans.woff":[["Bubblegum Sans.9972ca62.woff","Fonts/Bubblegum Sans.woff"],"Fonts/Bubblegum Sans.woff"],"./Images\\Header Background.jpg":[["Header Background.c6c61d89.jpg","Images/Header Background.jpg"],"Images/Header Background.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56750" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60760" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

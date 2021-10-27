@@ -18,12 +18,9 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Raleway;
-  color: #777;
+  color: black;
 }
 
-h2 {
-  color: #4ccc5d;
-}
 
 html, body {
   margin: 0;
@@ -76,7 +73,7 @@ html, body {
   padding-bottom: 30px;
 }
 
-.band-name {
+.store-name {
   text-align: center;
   margin: 0;
   font-size: 4em;
@@ -85,18 +82,20 @@ html, body {
   color: white;
 }
 
-.band-name-large {
+.store-name-large {
   font-size: 8em;
-}
-
-.content-section {
-  margin: 1em;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 2em;
   padding: 0 1.5em;
+}
+
+.content-section {
+  margin: 2em;
+  margin-bottom: 3em;
 }
 
 .section-header {
@@ -104,13 +103,21 @@ html, body {
   color: #333;
   text-align: center;
   font-size: 2.5em;
+  font-family: "Bubblegum Sans";
 }
 
-.about-band-image {
+.about-store-image {
+  float: left;
+  height: 220px;
+  width: 220px;
+  margin: 20px;
+  border-radius: 30%;
+}
+.home-page-image {
   float: left;
   height: 200px;
   width: 200px;
-  margin: 15px;
+  margin: 20px;
   border-radius: 50%;
 }
 
@@ -118,6 +125,9 @@ html, body {
   background-color: #56CCF2;
   color: white;
   padding: .25em 0;
+  margin: 0 auto;
+  margin-bottom: 0;
+  max-height: 90px;
 }
 
 .main-footer-container {
@@ -240,7 +250,14 @@ html, body {
 }
 
 .shop-item-image {
-  height: 250px;
+  box-sizing: border-box;
+  border-radius: 8%;
+}
+.phone-stands {
+  height: 25em;
+}
+.flowers{
+  height: 15em;
 }
 
 .shop-item-details {
@@ -377,4 +394,3 @@ html, body {
   margin: 40px auto 80px auto;
   font-size: 1.75em;
 }
-/*# sourceMappingURL=style.css.map */
