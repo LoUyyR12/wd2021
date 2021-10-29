@@ -193,6 +193,17 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("../scss/style.scss");
+
+var URL1 = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=6d10963869cca01f122105009ce9bf00";
+var res1;
+fetch(URL1).then(function (response) {
+  return response.json();
+}).then(function (r) {
+  res1 = r;
+  console.log(res1);
+}).catch(function (err) {
+  return console.log(err);
+});
 },{"../scss/style.scss":"scss/style.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -221,7 +232,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51315" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54642" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

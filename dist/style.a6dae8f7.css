@@ -48,7 +48,7 @@ html, body {
   text-align: center;
   font-size: 1.1em;
   font-weight: lighter;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-nav li {
@@ -65,11 +65,10 @@ html, body {
 }
 
 .main-header {
-  background-color: rgba(99, 123, 168, 0.74);
+  background-color: rgba(216, 91, 189, 0.74);
   background-image: url("/Sky3.51a770e0.jpg");
   background-blend-mode: multiply;
   background-size: cover;
-  padding-bottom: 10px;
 }
 
 .site-name {
@@ -99,7 +98,7 @@ html, body {
 
 .section-header {
   font-weight: normal;
-  color: #333;
+  color: #1d0b63;
   text-align: center;
   font-size: 2.5em;
   font-family: "Bubblegum Sans";
