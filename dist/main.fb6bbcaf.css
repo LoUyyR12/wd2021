@@ -27,6 +27,18 @@ html, body {
   min-height: 100%;
 }
 
+p {
+  font-size: 1.7em;
+  background-color: rgba(255, 255, 255, 0.212);
+  background-blend-mode: multiply;
+  text-shadow: 1px 1px 15px #f6d2eb;
+  max-width: fit-content;
+  max-height: fit-content;
+  font-weight: bold;
+  padding: 0.4em;
+  border-radius: 8%;
+}
+
 .nav ul {
   font-family: "Bubblegum Sans";
   margin: 0;
@@ -98,9 +110,11 @@ html, body {
 
 .section-header {
   font-weight: normal;
-  color: #1d0b63;
   text-align: center;
-  font-size: 2.5em;
+  text-shadow: 1px 1px 30px #f6d2d6;
+  color: #1d0b63;
+  font-size: 3em;
+  padding: 0;
   font-family: "Bubblegum Sans";
 }
 

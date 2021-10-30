@@ -194,13 +194,35 @@ module.hot.accept(reloadCSS);
 
 require("../scss/style.scss");
 
-var URL1 = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=6d10963869cca01f122105009ce9bf00";
-var res1;
+var temperature = document.getElementById("temperature");
+var feelsLike = document.getElementById("feels like");
+var windSpeed = document.getElementById("wind speed");
+var humidity = document.getElementById("humidity");
+var pressure = document.getElementById("pressure");
+var weather = document.getElementById("weather");
+var URL1 = "http://api.openweathermap.org/data/2.5/weather?q=Kyiv,ua&lang=ua&units=metric&APPID=6d10963869cca01f122105009ce9bf00";
+
+function Round(input) {
+  var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  return Math.round(input * Math.pow(10, precision)) / Math.pow(10, precision);
+}
+
+function fillHTML(response) {
+  temperature.textContent = "".concat(Round(response.main.temp));
+  feelsLike.textContent = "".concat(Round(response.main.feels_like));
+  windSpeed.textContent = "".concat(Round(response.wind.speed));
+  humidity.textContent = "".concat(Round(response.main.humidity));
+  pressure.textContent = "".concat(Round(response.main.pressure));
+  weather.textContent = "".concat(response.weather[0].description);
+}
+
+var response1;
 fetch(URL1).then(function (response) {
   return response.json();
 }).then(function (r) {
-  res1 = r;
-  console.log(res1);
+  response1 = r;
+  console.log(response1);
+  fillHTML(response1);
 }).catch(function (err) {
   return console.log(err);
 });
@@ -232,7 +254,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54642" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53078" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
