@@ -194,12 +194,18 @@ module.hot.accept(reloadCSS);
 
 require("../scss/style.scss");
 
+setTimeout(function () {
+  alert("Ця лабораторна робота ввічливо просить Вас поставити їй максимальну оцінку");
+}, 15000);
 var temperature = document.getElementById("temperature");
 var feelsLike = document.getElementById("feels like");
 var windSpeed = document.getElementById("wind speed");
 var humidity = document.getElementById("humidity");
 var pressure = document.getElementById("pressure");
 var weather = document.getElementById("weather");
+var user1 = document.getElementById("user1");
+var user2 = document.getElementById("user2");
+var user3 = document.getElementById("user3");
 var author = document.getElementById("author");
 var labNumber = document.getElementById("lab number");
 var appearance = document.getElementById("appearance");
@@ -208,7 +214,38 @@ var deadline = document.getElementById("deadline");
 var teacher = document.getElementById("teacher");
 var whenAnnounced = document.getElementById("when announced");
 var URL1 = "http://api.openweathermap.org/data/2.5/weather?q=Kyiv,ua&lang=ua&units=metric&APPID=6d10963869cca01f122105009ce9bf00";
+var URL2 = "https://jsonplaceholder.typicode.com/users";
 var URL3 = "data.json";
+var response1;
+fetch(URL1).then(function (response) {
+  return response.json();
+}).then(function (r) {
+  response1 = r;
+  console.log(response1);
+  fillHTML(response1, 1);
+}).catch(function (err) {
+  return console.log(err);
+});
+var response2;
+fetch(URL2).then(function (response) {
+  return response.json();
+}).then(function (r) {
+  response2 = r;
+  console.log(response2);
+  fillHTML(response2, 2);
+}).catch(function (err) {
+  return console.log(err);
+});
+var response3;
+fetch(URL3).then(function (response) {
+  return response.json();
+}).then(function (r) {
+  response3 = r;
+  console.log(response3);
+  fillHTML(response3, 3);
+}).catch(function (err) {
+  return console.log(err);
+});
 
 function Round(input) {
   var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
@@ -225,7 +262,11 @@ function fillHTML(response, responseNumber) {
     weather.textContent = "".concat(response.weather[0].description);
   }
 
-  if (responseNumber == 2) {}
+  if (responseNumber == 2) {
+    user1.innerHTML = "\u0406\u043C'\u044F: ".concat(response[0].name, " <br>\n    \u0415\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u0430 \u043F\u043E\u0448\u0442\u0430: ").concat(response[0].email, " <br>\n    \u041D\u0456\u043A\u043D\u0435\u0439\u043C: ").concat(response[0].username, " <br>\n    \u041A\u043E\u043C\u043F\u0430\u043D\u0456\u044F: ").concat(response[0].company.name, "\n    ");
+    user2.innerHTML = "\u0406\u043C'\u044F: ".concat(response[1].name, " <br>\n    \u0415\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u0430 \u043F\u043E\u0448\u0442\u0430: ").concat(response[1].email, " <br>\n    \u041D\u0456\u043A\u043D\u0435\u0439\u043C: ").concat(response[1].username, " <br>\n    \u041A\u043E\u043C\u043F\u0430\u043D\u0456\u044F: ").concat(response[1].company.name, "\n    ");
+    user3.innerHTML = "\u0406\u043C'\u044F: ".concat(response[2].name, " <br>\n    \u0415\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u0430 \u043F\u043E\u0448\u0442\u0430: ").concat(response[2].email, " <br>\n    \u041D\u0456\u043A\u043D\u0435\u0439\u043C: ").concat(response[2].username, " <br>\n    \u041A\u043E\u043C\u043F\u0430\u043D\u0456\u044F: ").concat(response[2].company.name, "\n    ");
+  }
 
   if (responseNumber == 3) {
     author.textContent = "".concat(response.student.name);
@@ -234,30 +275,9 @@ function fillHTML(response, responseNumber) {
     mark.textContent = "".concat(response.lab_info.mark);
     deadline.textContent = "".concat(response.deadline.date);
     teacher.textContent = "".concat(response.deadline.set_by);
-    whenAnnounced.textContent = "".concat(response.deadline.when_announced[0], ", \n    ").concat(response.deadline.when_announced[1], ", \n    ").concat(response.deadline.when_announced[2], "\n    ");
+    whenAnnounced.innerHTML = "".concat(response.deadline.when_announced[0], ", \n    ").concat(response.deadline.when_announced[1], ", \n    ").concat(response.deadline.when_announced[2], "\n    ");
   }
 }
-
-var response1;
-fetch(URL1).then(function (response) {
-  return response.json();
-}).then(function (r) {
-  response1 = r;
-  console.log(response1);
-  fillHTML(response1, 1);
-}).catch(function (err) {
-  return console.log(err);
-});
-var response3;
-fetch(URL3).then(function (response) {
-  return response.json();
-}).then(function (r) {
-  response3 = r;
-  console.log(response3);
-  fillHTML(response3, 3);
-}).catch(function (err) {
-  return console.log(err);
-});
 },{"../scss/style.scss":"scss/style.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -286,7 +306,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57625" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62138" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
