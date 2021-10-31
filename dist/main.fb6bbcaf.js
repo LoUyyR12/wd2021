@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\zero_zero.woff":[["zero_zero.7dbce11d.woff","fonts/zero_zero.woff"],"fonts/zero_zero.woff"],"./..\\fonts\\zero_zero.woff2":[["zero_zero.2b5fbbd2.woff2","fonts/zero_zero.woff2"],"fonts/zero_zero.woff2"],"./..\\fonts\\Bubblegum_Sans.woff":[["Bubblegum_Sans.6c517a7a.woff","fonts/Bubblegum_Sans.woff"],"fonts/Bubblegum_Sans.woff"],"./..\\images\\Sky2.jpg":[["Sky2.e0c09f61.jpg","images/Sky2.jpg"],"images/Sky2.jpg"],"./..\\images\\Sky3.jpg":[["Sky3.51a770e0.jpg","images/Sky3.jpg"],"images/Sky3.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
+},{"./..\\fonts\\zero_zero.woff":[["zero_zero.7dbce11d.woff","fonts/zero_zero.woff"],"fonts/zero_zero.woff"],"./..\\fonts\\zero_zero.woff2":[["zero_zero.2b5fbbd2.woff2","fonts/zero_zero.woff2"],"fonts/zero_zero.woff2"],"./..\\fonts\\Bubblegum_Sans.woff":[["Bubblegum_Sans.6c517a7a.woff","fonts/Bubblegum_Sans.woff"],"fonts/Bubblegum_Sans.woff"],"./..\\fonts\\Connie_Regular.woff":[["Connie_Regular.d95c1cf8.woff","fonts/Connie_Regular.woff"],"fonts/Connie_Regular.woff"],"./..\\images\\Sky2.jpg":[["Sky2.e0c09f61.jpg","images/Sky2.jpg"],"images/Sky2.jpg"],"./..\\images\\Sky3.jpg":[["Sky3.51a770e0.jpg","images/Sky3.jpg"],"images/Sky3.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 require("../scss/style.scss");
@@ -200,20 +200,42 @@ var windSpeed = document.getElementById("wind speed");
 var humidity = document.getElementById("humidity");
 var pressure = document.getElementById("pressure");
 var weather = document.getElementById("weather");
+var author = document.getElementById("author");
+var labNumber = document.getElementById("lab number");
+var appearance = document.getElementById("appearance");
+var mark = document.getElementById("mark");
+var deadline = document.getElementById("deadline");
+var teacher = document.getElementById("teacher");
+var whenAnnounced = document.getElementById("when announced");
 var URL1 = "http://api.openweathermap.org/data/2.5/weather?q=Kyiv,ua&lang=ua&units=metric&APPID=6d10963869cca01f122105009ce9bf00";
+var URL3 = "data.json";
 
 function Round(input) {
   var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
   return Math.round(input * Math.pow(10, precision)) / Math.pow(10, precision);
 }
 
-function fillHTML(response) {
-  temperature.textContent = "".concat(Round(response.main.temp));
-  feelsLike.textContent = "".concat(Round(response.main.feels_like));
-  windSpeed.textContent = "".concat(Round(response.wind.speed));
-  humidity.textContent = "".concat(Round(response.main.humidity));
-  pressure.textContent = "".concat(Round(response.main.pressure));
-  weather.textContent = "".concat(response.weather[0].description);
+function fillHTML(response, responseNumber) {
+  if (responseNumber == 1) {
+    temperature.textContent = "".concat(Round(response.main.temp));
+    feelsLike.textContent = "".concat(Round(response.main.feels_like));
+    windSpeed.textContent = "".concat(Round(response.wind.speed));
+    humidity.textContent = "".concat(Round(response.main.humidity));
+    pressure.textContent = "".concat(Round(response.main.pressure));
+    weather.textContent = "".concat(response.weather[0].description);
+  }
+
+  if (responseNumber == 2) {}
+
+  if (responseNumber == 3) {
+    author.textContent = "".concat(response.student.name);
+    labNumber.textContent = "".concat(response.lab_info.lab_number);
+    appearance.textContent = "".concat(response.lab_info.appearance);
+    mark.textContent = "".concat(response.lab_info.mark);
+    deadline.textContent = "".concat(response.deadline.date);
+    teacher.textContent = "".concat(response.deadline.set_by);
+    whenAnnounced.textContent = "".concat(response.deadline.when_announced[0], ", \n    ").concat(response.deadline.when_announced[1], ", \n    ").concat(response.deadline.when_announced[2], "\n    ");
+  }
 }
 
 var response1;
@@ -222,7 +244,17 @@ fetch(URL1).then(function (response) {
 }).then(function (r) {
   response1 = r;
   console.log(response1);
-  fillHTML(response1);
+  fillHTML(response1, 1);
+}).catch(function (err) {
+  return console.log(err);
+});
+var response3;
+fetch(URL3).then(function (response) {
+  return response.json();
+}).then(function (r) {
+  response3 = r;
+  console.log(response3);
+  fillHTML(response3, 3);
 }).catch(function (err) {
   return console.log(err);
 });
@@ -254,7 +286,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53078" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57625" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

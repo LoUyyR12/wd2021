@@ -12,6 +12,11 @@
   src: url("/Bubblegum_Sans.6c517a7a.woff") format("woff");
   font-weight: normal;
 }
+@font-face {
+  font-family: "Connie";
+  src: url("/Connie_Regular.d95c1cf8.woff") format("woff");
+  font-weight: normal;
+}
 body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -31,12 +36,13 @@ p {
   font-size: 1.7em;
   background-color: rgba(255, 255, 255, 0.212);
   background-blend-mode: multiply;
-  text-shadow: 1px 1px 15px #f6d2eb;
+  text-shadow: 1px 1px 25px #faade3;
   max-width: fit-content;
   max-height: fit-content;
   font-weight: bold;
   padding: 0.4em;
   border-radius: 8%;
+  margin: 0.8em;
 }
 
 .nav ul {
@@ -87,12 +93,13 @@ p {
   text-align: center;
   margin: 0;
   font-size: 4em;
-  font-family: "Booter - Zero Zero";
+  font-family: "Connie";
   font-weight: normal;
   color: white;
 }
 
 .site-name-large {
+  font-family: "Connie";
   font-size: 8em;
 }
 
@@ -109,13 +116,15 @@ p {
 }
 
 .section-header {
-  font-weight: normal;
+  font-weight: 900;
   text-align: center;
-  text-shadow: 1px 1px 30px #f6d2d6;
+  text-shadow: 1px 1px 30px #f1bde6;
   color: #1d0b63;
   font-size: 3em;
   padding: 0;
-  font-family: "Bubblegum Sans";
+  font-family: "Connie";
+  margin-bottom: 0;
+  margin-top: 0.6em;
 }
 
 .about-site-image {
