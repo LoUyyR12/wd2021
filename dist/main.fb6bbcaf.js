@@ -216,7 +216,6 @@ var whenAnnounced = document.getElementById("when announced");
 var URL1 = "http://api.openweathermap.org/data/2.5/weather?q=Kyiv,ua&lang=ua&units=metric&APPID=6d10963869cca01f122105009ce9bf00";
 var URL2 = "https://jsonplaceholder.typicode.com/users";
 var URL3 = "data.json";
-var response1;
 fetch(URL1).then(function (response) {
   return response.json();
 }).then(function (r) {
@@ -246,6 +245,7 @@ fetch(URL3).then(function (response) {
 }).catch(function (err) {
   return console.log(err);
 });
+var response1;
 
 function Round(input) {
   var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
@@ -306,7 +306,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58049" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55713" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

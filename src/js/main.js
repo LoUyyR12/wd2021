@@ -26,10 +26,7 @@ const URL1 = "http://api.openweathermap.org/data/2.5/weather?q=Kyiv,ua&lang=ua&u
 const URL2 = "https://jsonplaceholder.typicode.com/users"
 
 const URL3 = "data.json"
-
-let response1;
-
-fetch(URL1)
+  fetch(URL1)
   .then(response => response.json())
   .then(r => {
     response1 = r
@@ -59,6 +56,9 @@ fetch(URL2)
       fillHTML(response3, 3)
     })
     .catch(err => console.log(err))
+
+let response1;
+
 
 function Round(input, precision = 1){
   return Math.round(input * 10**precision) / 10**precision
