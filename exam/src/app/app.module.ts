@@ -33,6 +33,7 @@ import { NewsScienceComponent } from './news-science/news-science.component';
       {path: '', component: HeroSectionComponent},
       {path: 'news/medicine', component: NewsMedicineComponent},
       {path: 'news/ai', component: NewsAiComponent},
+      {path: 'news/science', component: NewsScienceComponent},
       {path: 'news', component: NewsSectionComponent},
       {path: 'forms', component: ContactFormComponent},
       {path: '**', component: HeroSectionComponent}

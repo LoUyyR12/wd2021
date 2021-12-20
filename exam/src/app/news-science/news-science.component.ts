@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsScienceComponent implements OnInit {
 
+  title = "Reaching the Sun"
+
   constructor() { }
 
   ngOnInit(): void {
