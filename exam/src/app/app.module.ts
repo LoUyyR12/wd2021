@@ -10,6 +10,9 @@ import { NewsService } from './services/news.service';
 import { RouterModule } from '@angular/router';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
+import { NewsMedicineComponent } from './news-medicine/news-medicine.component';
+import { NewsAiComponent } from './news-ai/news-ai.component';
+import { NewsScienceComponent } from './news-science/news-science.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,18 @@ import { FooterComponent } from './footer/footer.component';
     HeroSectionComponent,
     NewsSectionComponent,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    NewsMedicineComponent,
+    NewsAiComponent,
+    NewsScienceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component: HeroSectionComponent},
+      {path: 'news/medicine', component: NewsMedicineComponent},
+      {path: 'news/ai', component: NewsAiComponent},
       {path: 'news', component: NewsSectionComponent},
       {path: 'forms', component: ContactFormComponent},
       {path: '**', component: HeroSectionComponent}
